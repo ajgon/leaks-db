@@ -1,0 +1,23 @@
+{
+  "title": "LinkedIn",
+  "domain": "linkedin.com",
+  "breach_date": "2012-05-05",
+  "compromised_accounts": 164611595,
+  "description": "In May 2016, <a href=\"https://www.troyhunt.com/observations-and-thoughts-on-the-linkedin-data-breach\" target=\"_blank\" rel=\"noopener\">LinkedIn had 164 million email addresses and passwords exposed</a>. Originally hacked in 2012, the data remained out of sight until being offered for sale on a dark market site 4 years later. The passwords in the breach were stored as SHA1 hashes without salt, the vast majority of which were quickly cracked in the days following the release of the data.",
+  "compromised_data": [
+    "Email addresses",
+    "Passwords"
+  ],
+  "logo": {
+    "mime_type": "image/svg+xml",
+    "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEwMHB4IiBoZWlnaHQ9IjEwMHB4IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iIzAwN0JCNiIgZD0iTTkyLjU5MiwwSDcuMzc2QzMuMzA4LDAsMCwzLjIyOCwwLDcuMjA1djg1LjU3OUMwLDk2Ljc2NywzLjMwOCwxMDAsNy4zNzYsMTAwaDg1LjIxNSBjNC4wNzYsMCw3LjQwOC0zLjIzMyw3LjQwOC03LjIxNlY3LjIwNUMxMDAsMy4yMjgsOTYuNjY4LDAsOTIuNTkyLDB6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE0Ljc5NCwzNy40OTFIMjkuNjVWODUuMjFIMTQuNzk0VjM3LjQ5MXogTTIyLjIyNiwxMy43NjhjNC43NDksMCw4LjYwMywzLjg1NCw4LjYwMyw4LjU5NiBjMCw0Ljc0OC0zLjg1NCw4LjYwMi04LjYwMyw4LjYwMmMtNC43NjcsMC04LjYxLTMuODU0LTguNjEtOC42MDJDMTMuNjE2LDE3LjYyMSwxNy40NTksMTMuNzY4LDIyLjIyNiwxMy43NjgiLz48cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMzguOTYyLDM3LjQ5MWgxNC4yMjd2Ni41MmgwLjIwM2MxLjk3OS0zLjc1Miw2LjgyNS03LjcwOCwxNC4wNDUtNy43MDggYzE1LjAxNywwLDE3Ljc5NCw5Ljg4MSwxNy43OTQsMjIuNzMzVjg1LjIxSDcwLjQwMVY2Mi4wMDdjMC01LjUzNS0wLjEwNi0xMi42NTQtNy43MTQtMTIuNjU0Yy03LjcyMywwLTguOTAxLDYuMDI3LTguOTAxLDEyLjI1MiBWODUuMjFIMzguOTYyVjM3LjQ5MXoiLz48L3N2Zz4="
+  },
+  "haveibeenpwned": {
+    "verified": true,
+    "fabricated": false,
+    "sensitive": false,
+    "active": true,
+    "retired": false,
+    "spam_list": false
+  }
+}

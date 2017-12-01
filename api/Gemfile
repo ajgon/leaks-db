@@ -1,15 +1,31 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'active_model_serializers'
+gem 'elasticsearch'
+gem 'elasticsearch-persistence'
+gem 'faraday'
+gem 'faraday_middleware'
 gem 'puma'
 gem 'rails'
+gem 'smarter_csv'
+gem 'stringex'
+gem 'waterfall'
 
 group :development, :test do
   gem 'rspec-rails'
+end
+
+group :test do
+  gem 'faker'
+  gem 'simplecov', require: false
+  gem 'webmock', require: false
 end
 
 group :development do

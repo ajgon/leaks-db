@@ -16,11 +16,14 @@ services:
       - ./es-data:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
-  kibana:
-    image: docker.elastic.co/kibana/kibana:6.0.0
-    environment:
-      ELASTICSEARCH_URL: http://leaks_elasticsearch:9200
+  api:
+    build:
+      context: api/
+      dockerfile: ./Dockerfile
     links:
       - elasticsearch
     ports:
-      - 5601:5601
+      - 3000:3000
+    volumes:
+      - "./api:/app"
+

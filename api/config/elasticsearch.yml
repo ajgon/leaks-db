@@ -1,0 +1,10 @@
+---
+development:
+  host: 'leaks_elasticsearch'
+  port: 9200
+  log: true
+test:
+  host: 'leaks_elasticsearch_test'
+  port: 9200
+production:
+  url: <%= ENV['ELASTICSEARCH_URL'] %>

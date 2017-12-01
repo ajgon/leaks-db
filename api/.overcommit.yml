@@ -1,0 +1,54 @@
+---
+PreCommit:
+  ALL:
+    on_warn: fail    # Treat all warnings as failures
+    exclude:
+      - log/**/*
+      - coverage/**/*
+  AuthorEmail:
+    enabled: true
+    required: false
+  AuthorName:
+    enabled: true
+    required: false
+  BrokenSymlinks:
+    enabled: true
+  BundleAudit:
+    enabled: true
+  BundleCheck:
+    enabled: true
+  CaseConflicts:
+    enabled: true
+  Fasterer:
+    enabled: true
+  FixMe:
+    enabled: true
+  HardTabs:
+    enabled: true
+  JsonSyntax:
+    enabled: true
+  LocalPathsInGemfile:
+    enabled: true
+  Mdl:
+    enabled: true
+  MergeConflicts:
+    enabled: true
+  RailsBestPractices:
+    enabled: true
+  RuboCop:
+    enabled: true
+    flags: ['--format=emacs', '--force-exclusion', '--display-cop-names']
+  ShellCheck:
+    enabled: true
+  TrailingWhitespace:
+    enabled: true
+  TravisLint:
+    enabled: true
+  XmlLint:
+    enabled: true
+  XmlSyntax:
+    enabled: true
+  YamlLint:
+    enabled: true
+  YamlSyntax:
+    enabled: true

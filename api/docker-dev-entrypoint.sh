@@ -8,6 +8,6 @@ fi
 mkdir -p "$HOME/.local/share"
 ln -s "$APP_HOME/.ruby-advisory-db" "$HOME/.local/share/ruby-advisory-db"
 bundle-audit update
-cd "$APP_HOME" && git init && bundle exec overcommit --sign && overcommit --sign pre-commit
+cd "$APP_HOME" && git init && git add -A && bundle exec overcommit --sign && overcommit --sign pre-commit
 
 exec "$@"

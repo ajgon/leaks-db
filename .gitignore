@@ -12,7 +12,18 @@ api/log/*
 api/tmp/*
 !api/log/.keep
 !api/tmp/.keep
+api/coverage
 
 # elasticsearch
 es-data/*
-!es-data/.keep
+!es-data/dev
+es-data/dev/*
+!es-data/dev/.keep
+!es-data/test
+es-data/test/*
+!es-data/test/.keep
+
+# leaks
+leaks/*
+!leaks/.keep
+*.lk

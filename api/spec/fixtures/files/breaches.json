@@ -1,0 +1,44 @@
+[
+    {
+        "AddedDate": "2016-08-31T00:19:19Z",
+        "BreachDate": "2012-07-01",
+        "DataClasses": [
+            "Email addresses",
+            "Passwords"
+        ],
+        "Description": "In mid-2012, Dropbox suffered a data breach which exposed the stored credentials of tens of millions of their customers. In August 2016, <a href=\"https://motherboard.vice.com/read/dropbox-forces-password-resets-after-user-credentials-exposed\" target=\"_blank\" rel=\"noopener\">they forced password resets for customers they believed may be at risk</a>. A large volume of data totalling over 68 million records <a href=\"https://motherboard.vice.com/read/hackers-stole-over-60-million-dropbox-accounts\" target=\"_blank\" rel=\"noopener\">was subsequently traded online</a> and included email addresses and salted hashes of passwords (half of them SHA1, half of them bcrypt).",
+        "Domain": "dropbox.com",
+        "IsActive": true,
+        "IsFabricated": false,
+        "IsRetired": false,
+        "IsSensitive": false,
+        "IsSpamList": false,
+        "IsVerified": true,
+        "LogoType": "svg",
+        "ModifiedDate": "2016-08-31T00:19:19Z",
+        "Name": "Dropbox",
+        "PwnCount": 68648009,
+        "Title": "Dropbox"
+    },
+    {
+        "AddedDate": "2016-05-21T21:35:40Z",
+        "BreachDate": "2012-05-05",
+        "DataClasses": [
+            "Email addresses",
+            "Passwords"
+        ],
+        "Description": "In May 2016, <a href=\"https://www.troyhunt.com/observations-and-thoughts-on-the-linkedin-data-breach\" target=\"_blank\" rel=\"noopener\">LinkedIn had 164 million email addresses and passwords exposed</a>. Originally hacked in 2012, the data remained out of sight until being offered for sale on a dark market site 4 years later. The passwords in the breach were stored as SHA1 hashes without salt, the vast majority of which were quickly cracked in the days following the release of the data.",
+        "Domain": "linkedin.com",
+        "IsActive": true,
+        "IsFabricated": false,
+        "IsRetired": false,
+        "IsSensitive": false,
+        "IsSpamList": false,
+        "IsVerified": true,
+        "LogoType": "svg",
+        "ModifiedDate": "2016-05-21T21:35:40Z",
+        "Name": "LinkedIn",
+        "PwnCount": 164611595,
+        "Title": "LinkedIn"
+    }
+]

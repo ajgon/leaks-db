@@ -13,9 +13,21 @@ services:
         soft: -1
         hard: -1
     volumes:
-      - ./es-data:/usr/share/elasticsearch/data
+      - ./es-data/dev:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
+  elasticsearch_test:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.0.0
+    container_name: leaks_elasticsearch_test
+    environment:
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - ./es-data/test:/usr/share/elasticsearch/data
   kibana:
     image: docker.elastic.co/kibana/kibana:6.0.0
     environment:
@@ -30,6 +42,7 @@ services:
       dockerfile: ./Dockerfile.dev
     links:
       - elasticsearch
+      - elasticsearch_test
     ports:
       - 3000:3000
     volumes:

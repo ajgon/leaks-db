@@ -1,0 +1,18 @@
+---
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
+
+AllCops:
+  TargetRubyVersion: 2.4
+  DisplayCopNames: true
+  Exclude:
+    - bin/**/*
