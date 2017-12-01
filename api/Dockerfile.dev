@@ -1,0 +1,41 @@
+FROM ruby:latest
+ENV APP_HOME /app
+ENV RAILS_ENV=development
+
+RUN apt-get update && \
+    apt-get install --yes --no-install-recommends apt-transport-https ca-certificates && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN printf "deb http://deb.debian.org/debian testing main\ndeb http://deb.debian.org/debian testing-updates main\ndeb http://security.debian.org testing/updates main" > /etc/apt/sources.list.d/testing.list && \
+    apt-get update && \
+    apt-get install --yes --no-install-recommends python-pip python-setuptools python-yaml locales && \
+    apt-get install --yes --no-install-recommends --target-release=testing git && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN gem update --no-document --system
+
+# configure locale
+RUN echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
+RUN locale-gen
+ENV LC_ALL en_US.UTF-8
+
+# some cribbing from https://robots.thoughtbot.com/rails-on-docker
+ENV APP_HOME /app
+RUN mkdir "$APP_HOME"
+WORKDIR $APP_HOME
+
+# Freeze the dependencies into a layer (memoized by Docker with the hashes of the Rubygems
+# dependency control files)
+RUN gem install bundler
+RUN pip install yamllint
+
+COPY Gemfile* $APP_HOME/
+RUN bundle install -j 4
+
+COPY docker-dev-entrypoint.sh /
+
+ENTRYPOINT ["/docker-dev-entrypoint.sh"]
+
+CMD /app/bin/rails server --port ${PORT:-3000} --binding 0.0.0.0
